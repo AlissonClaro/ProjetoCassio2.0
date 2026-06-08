@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOE Escolar | Revisão</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand compact" href="painel.html" aria-label="Página inicial do BOE Escolar">
+      <div class="brand-logo small" aria-hidden="true"><span class="logo-document"></span><span class="logo-alert"></span></div>
+      <span>BOE Escolar</span>
+    </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="painel.html">Painel</a>
+      <a href="nova-ocorrencia.html">Nova ocorrência</a>
+      <a href="historico.html">Histórico</a>
+      <button id="logoutBtn" class="btn btn-ghost" type="button">Sair</button>
+    </nav>
+  </header>
+
+  <main class="container narrow">
+    <section class="section-card">
+      <p class="eyebrow">Etapa 2</p>
+      <h1>Revisão do Boletim</h1>
+      <p class="page-description">Confira os dados antes de salvar. O registro ficará disponível no histórico.</p>
+
+      <div id="reviewBox" class="review-box"></div>
+
+      <div class="notice danger-notice">
+        <strong>Atenção:</strong>
+        <span>verifique se as informações estão objetivas e sem julgamentos pessoais.</span>
+      </div>
+
+      <div class="form-actions">
+        <a class="btn btn-secondary" href="nova-ocorrencia.html">Editar</a>
+        <button id="confirmSaveBtn" class="btn btn-danger" type="button">Salvar ocorrência</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

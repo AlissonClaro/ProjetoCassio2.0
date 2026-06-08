@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOE Escolar | Login</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="auth-page">
+    <section class="auth-card" aria-labelledby="titulo-login">
+      <div class="brand brand-center">
+        <div class="brand-logo" aria-hidden="true">
+          <span class="logo-document"></span>
+          <span class="logo-alert"></span>
+        </div>
+        <div>
+          <h1 id="titulo-login">BOE Escolar</h1>
+          <p>Boletim de Ocorrência Escolar</p>
+        </div>
+      </div>
+
+      <div class="notice info-notice">
+        <strong>Acesso restrito</strong>
+        <span>Uso exclusivo de professores e equipe autorizada.</span>
+      </div>
+
+      <form id="loginForm" class="form" novalidate>
+        <div class="form-group">
+          <label for="email">E-mail institucional</label>
+          <input id="email" name="email" type="email" placeholder="professor@escola.edu.br" autocomplete="email" required />
+          <small class="error-message" data-error="email"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input id="senha" name="senha" type="password" placeholder="Digite sua senha" autocomplete="current-password" required minlength="4" />
+          <small class="error-message" data-error="senha"></small>
+        </div>
+
+        <button class="btn btn-primary btn-full" type="submit">Entrar no sistema</button>
+      </form>
+
+      <p class="helper-text">Demonstração acadêmica: qualquer e-mail válido e senha com 4 caracteres acessa o sistema.</p>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>

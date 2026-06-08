@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOE Escolar | Nova Ocorrência</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand compact" href="painel.html" aria-label="Página inicial do BOE Escolar">
+      <div class="brand-logo small" aria-hidden="true"><span class="logo-document"></span><span class="logo-alert"></span></div>
+      <span>BOE Escolar</span>
+    </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="painel.html">Painel</a>
+      <a href="nova-ocorrencia.html" class="active">Nova ocorrência</a>
+      <a href="historico.html">Histórico</a>
+      <button id="logoutBtn" class="btn btn-ghost" type="button">Sair</button>
+    </nav>
+  </header>
+
+  <main class="container narrow">
+    <section class="section-card">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Etapa 1</p>
+          <h1>Nova Ocorrência</h1>
+          <p>Preencha os dados de forma objetiva e institucional.</p>
+        </div>
+      </div>
+
+      <form id="occurrenceForm" class="form form-grid" novalidate>
+        <div class="form-group">
+          <label for="aluno">Aluno envolvido</label>
+          <input id="aluno" name="aluno" type="text" placeholder="Nome do aluno" required />
+          <small class="error-message" data-error="aluno"></small>
+        </div>
+        <div class="form-group">
+          <label for="turma">Turma</label>
+          <input id="turma" name="turma" type="text" placeholder="Ex.: 2º Ano B" required />
+          <small class="error-message" data-error="turma"></small>
+        </div>
+        <div class="form-group">
+          <label for="data">Data</label>
+          <input id="data" name="data" type="date" required />
+          <small class="error-message" data-error="data"></small>
+        </div>
+        <div class="form-group">
+          <label for="horario">Horário</label>
+          <input id="horario" name="horario" type="time" required />
+          <small class="error-message" data-error="horario"></small>
+        </div>
+        <div class="form-group">
+          <label for="local">Local da ocorrência</label>
+          <input id="local" name="local" type="text" placeholder="Ex.: Pátio da escola" required />
+          <small class="error-message" data-error="local"></small>
+        </div>
+        <div class="form-group">
+          <label for="tipo">Tipo de ocorrência</label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Selecione</option>
+            <option>Conflito grave</option>
+            <option>Agressão física</option>
+            <option>Ameaça</option>
+            <option>Dano ao patrimônio</option>
+            <option>Outro caso grave</option>
+          </select>
+          <small class="error-message" data-error="tipo"></small>
+        </div>
+        <div class="form-group full">
+          <label for="descricao">Descrição dos fatos</label>
+          <textarea id="descricao" name="descricao" rows="6" placeholder="Descreva o ocorrido com clareza: fatos, envolvidos, local, horário e providências iniciais." required minlength="20"></textarea>
+          <small class="error-message" data-error="descricao"></small>
+        </div>
+        <div class="form-group full">
+          <label for="providencia">Providência inicial</label>
+          <textarea id="providencia" name="providencia" rows="3" placeholder="Ex.: Comunicação à coordenação, contato com responsáveis, orientação ao aluno." required minlength="10"></textarea>
+          <small class="error-message" data-error="providencia"></small>
+        </div>
+
+        <div class="form-actions full">
+          <button class="btn btn-secondary" type="reset">Limpar</button>
+          <button class="btn btn-primary" type="submit">Revisar boletim</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
